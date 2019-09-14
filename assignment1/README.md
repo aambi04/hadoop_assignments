@@ -1,3 +1,4 @@
+
 # Programming Assignment 1 - Hadoop Installation
 In this assignment you will verify your Hadoop Installation by running sample code that comes with the Hadoop.
 
