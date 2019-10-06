@@ -1,0 +1,130 @@
+Script started on Sun 06 Oct 2019 07:05:10 PM EDT
+]777;notify;Command completed;reboot]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[?1034h[aagaw29@hdserver hadoop]$ suo [K[Kdo vi etc/hadoop/mapred-site.xml 
+[sudo] password for aagaw29: 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"etc/hadoop/mapred-site.xml" 21L, 758C[1;1H<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at[8;5Hhttp://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+</configuration>
+[94m~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[m[24;1H[1m-- INSERT --[m[24;13H[K[20;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25ly[?12l[?25h[?25l>[?12l[?25h[?25l[21;23r[21;1H[L[1;24r[21;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25lm[?12l[?25h[?25la[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25ld[?12l[?25h[?25lu[?12l[?25h[?25lc[?12l[?25h[?25le[?12l[?25h[?25l.[?12l[?25h[?25lf[?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25lc[?12l[?25h[?25l[21;29H[K[21;29H[?12l[?25h[?25le[?12l[?25h[?25lw[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25lk[?12l[?25h[?25l.[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25l[22;1H[K[23;1H</configuration>[23;17H[K[22;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25lv[?12l[?25h[?25ll[?12l[?25h[?25lu[?12l[?25h[?25la[?12l[?25h[?25l[22;13H[K[22;13H[?12l[?25h[?25l[22;12H[K[22;12H[?12l[?25h[?25l[22;11H[K[22;11H[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25lu[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25ly[?12l[?25h[?25la[?12l[?25h[?25lr[?12l[?25h[?25ln[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25lv[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25lu[?12l[?25h[?25ls[?12l[?25h[?25l>[?12l[?25h[?25l[22;27H[K[22;27H[?12l[?25h[?25l[22;26H[K[22;26H[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25l[23;1H[K[23;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25ly[?12l[?25h[?25l>[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H</configuration>[?12l[?25h[24;1H[K[23;16H[?25l[?12l[?25h[?25l
+:[?12l[?25hwq[?25l"etc/hadoop/mapred-site.xml" 24L, 842C written
+[?1l>[?12l[?25h[?1049l]777;notify;Command completed;sudo vi etc/hadoop/mapred-site.xml ]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ sudo vi etc/hadoop/yarn-site.xml 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"etc/hadoop/yarn-site.xml" 19L, 690C[1;1H<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at[7;5Hhttp://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+
+<!-- Site specific YARN configuration properties -->
+
+</configuration>
+[94m~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[16;1H[?25l[m[24;1H[1m-- INSERT --[m[24;13H[K[16;1H[?12l[?25h
+
+[?25l[17;23r[23;1H
+[1;24r[17;1H<!-- Site specific YARN configuration properties -->[23;1H[94m~                                                                               [17;53H[?12l[?25h[?25l[m[17;52H[K[17;52H[?12l[?25h[?25l[17;51H[K[17;51H[?12l[?25h[?25l[17;50H[K[17;50H[?12l[?25h[?25l[?12l[?25h[?25l[17;48H[K[17;48H[?12l[?25h[?25l[17;47H[K[17;47H[?12l[?25h[?25l[17;46H[K[17;46H[?12l[?25h[?25l[17;45H[K[17;45H[?12l[?25h[?25l[17;44H[K[17;44H[?12l[?25h[?25l[17;43H[K[17;43H[?12l[?25h[?25l[17;42H[K[17;42H[?12l[?25h[?25l[17;41H[K[17;41H[?12l[?25h[?25l[17;40H[K[17;40H[?12l[?25h[?25l[17;39H[K[17;39H[?12l[?25h[?25l[?12l[?25h[?25l[17;37H[K[17;37H[?12l[?25h[?25l[17;36H[K[17;36H[?12l[?25h[?25l[17;35H[K[17;35H[?12l[?25h[?25l[17;34H[K[17;34H[?12l[?25h[?25l[17;33H[K[17;33H[?12l[?25h[?25l[17;32H[K[17;32H[?12l[?25h[?25l[17;31H[K[17;31H[?12l[?25h[?25l[17;30H[K[17;30H[?12l[?25h[?25l[17;29H[K[17;29H[?12l[?25h[?25l[17;28H[K[17;28H[?12l[?25h[?25l[17;27H[K[17;27H[?12l[?25h[?25l[17;26H[K[17;26H[?12l[?25h[?25l[17;25H[K[17;25H[?12l[?25h[?25l[?12l[?25h[?25l[17;23H[K[17;23H[?12l[?25h[?25l[17;22H[K[17;22H[?12l[?25h[?25l[17;21H[K[17;21H[?12l[?25h[?25l[17;20H[K[17;20H[?12l[?25h[?25l[?12l[?25h[?25l[17;18H[K[17;18H[?12l[?25h[?25l[17;17H[K[17;17H[?12l[?25h[?25l[17;16H[K[17;16H[?12l[?25h[?25l[17;15H[K[17;15H[?12l[?25h[?25l[17;14H[K[17;14H[?12l[?25h[?25l[17;13H[K[17;13H[?12l[?25h[?25l[17;12H[K[17;12H[?12l[?25h[?25l[17;11H[K[17;11H[?12l[?25h[?25l[?12l[?25h[?25l[17;9H[K[17;9H[?12l[?25h[?25l[17;8H[K[17;8H[?12l[?25h[?25l[17;7H[K[17;7H[?12l[?25h[?25l[17;6H[K[17;6H[?12l[?25h[?25l[?12l[?25h[?25l[17;4H[K[17;4H[?12l[?25h[?25l[17;3H[K[17;3H[?12l[?25h[?25l[17;2H[K[17;2H[?12l[?25h[?25l[17;1H[K[17;1H[?12l[?25h[?25l[16;23r[23;1H
+[1;24r[23;1H[94m~                                                                               [16;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l[m<[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25ly[?12l[?25h[?25l>[?12l[?25h[?25l[17;23r[17;1H[L[1;24r[17;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25ly[?12l[?25h[?25la[?12l[?25h[?25lr[?12l[?25h[?25ln[?12l[?25h[?25l.[?12l[?25h[?25ln[?12l[?25h[?25lo[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25lm[?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25l.[?12l[?25h[?25la[?12l[?25h[?25lu[?12l[?25h[?25lx[?12l[?25h[?25l-[?12l[?25h[?25ls[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25lv[?12l[?25h[?25li[?12l[?25h[?25lc[?12l[?25h[?25le[?12l[?25h[?25ls[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25ly[?12l[?25h[?25la[?12l[?25h[?25lr[?12l[?25h[?25ln[?12l[?25h[?25l>[?12l[?25h[?25l[18;23r[18;1H[L[1;24r[18;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25lv[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25lu[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25lm[?12l[?25h[?25la[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25ld[?12l[?25h[?25lu[?12l[?25h[?25lc[?12l[?25h[?25le[?12l[?25h[?25l_[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25lf[?12l[?25h[?25l[18;28H[K[18;28H[?12l[?25h[?25lu[?12l[?25h[?25lf[?12l[?25h[?25lf[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25lv[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25lu[?12l[?25h[?25le[?12l[?25h[?25l>[?12l[?25h[?25l[19;23r[19;1H[L[1;24r[19;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l<[?12l[?25h[?25l/[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25ly[?12l[?25h[?25l>[?12l[?25h[24;1H[K[19;19H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hwq[?25l"etc/hadoop/yarn-site.xml" 20L, 738C written
+[?1l>[?12l[?25h[?1049l]777;notify;Command completed;sudo vi etc/hadoop/yarn-site.xml ]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ sbin/start-yarn.sh
+starting yarn daemons
+starting resourcemanager, logging to /home/aagaw29/hadoop/logs/yarn-aagaw29-resourcemanager-hdserver.out
+localhost: starting nodemanager, logging to /home/aagaw29/hadoop/logs/yarn-aagaw29-nodemanager-hdserver.out
+localhost: [Fatal Error] yarn-site.xml:17:39: The element type "name" must be terminated by the matching end-tag "</name>".
+]777;notify;Command completed;sbin/start-yarn.sh]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ sbin/start-yarn.shudo vi etc/hadoop/yarn-site.xml 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"etc/hadoop/yarn-site.xml" 20L, 738C[1;1H<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at[7;5Hhttp://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>[16;9H<property>[17;9H<name>yarn.nodemanager.aux-services</yarn>[18;9H<value>mapreduce_shuffle</value>[19;9H</property>
+</configuration>
+[94m~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+[16;8H[17;8H[18;8H[17;8H[m [?25l[24;1H[1m-- INSERT --[m[24;13H[K[17;9H[?12l[?25h<name>yarn.nodemanager.aux-services</yarn[?25l>[17;50H[K[17;49H[?12l[?25h[?25l>[17;49H[K[17;48H[?12l[?25h[?25l>[17;48H[K[17;47H[?12l[?25h[?25l>[17;47H[K[17;46H[?12l[?25h[?25ln>[?12l[?25h[?25la>[?12l[?25h[?25lm>[?12l[?25h[?25le>[?12l[?25h[24;1H[K[17;49H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hwq[?25l"etc/hadoop/yarn-site.xml" 20L, 738C written
+[?1l>[?12l[?25h[?1049l]777;notify;Command completed;sudo vi etc/hadoop/yarn-site.xml ]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ sudo vi etc/hadoop/yarn-site.xml [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pbin/start-yarn.sh
+starting yarn daemons
+starting resourcemanager, logging to /home/aagaw29/hadoop/logs/yarn-aagaw29-resourcemanager-hdserver.out
+localhost: starting nodemanager, logging to /home/aagaw29/hadoop/logs/yarn-aagaw29-nodemanager-hdserver.out
+]777;notify;Command completed;sbin/start-yarn.sh]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ jps
+6561 ResourceManager
+6675 NodeManager
+6983 Jps
+]777;notify;Command completed;jps]0;aagaw29@hdserver:~/hadoop]7;file://hdserver/home/aagaw29/hadoop[aagaw29@hdserver hadoop]$ exit
+exit
+
+Script done on Sun 06 Oct 2019 07:15:57 PM EDT

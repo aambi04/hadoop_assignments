@@ -1,7 +1,0 @@
-Script started on Sat 14 Sep 2019 07:39:32 PM EDT
-]0;aagarwal@hdserver:~/Documents/all_assignments/assignment1/hadoop-2.7.3/etc[?1034h[aagarwal@hdserver etc]$ bin/hdfs s[Kdfs -mkdir /user
-bash: bin/hdfs: No such file or directory
-]0;aagarwal@hdserver:~/Documents/all_assignments/assignment1/hadoop-2.7.3/etc[aagarwal@hdserver etc]$ c[Kexit
-exit
-
-Script done on Sat 14 Sep 2019 07:39:49 PM EDT

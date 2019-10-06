@@ -1,8 +1,0 @@
-Script started on Sat 14 Sep 2019 07:39:02 PM EDT
-]0;aagarwal@hdserver:~/Documents/all_assignments/assignment1/hadoop-2.7.3/etc/hadoop[?1034h[aagarwal@hdserver hadoop]$ bin/hdfs dfs -mkdir /user
-bash: bin/hdfs: No such file or directory
-]0;aagarwal@hdserver:~/Documents/all_assignments/assignment1/hadoop-2.7.3/etc/hadoop[aagarwal@hdserver hadoop]$ cd ..
-]0;aagarwal@hdserver:~/Documents/all_assignments/assignment1/hadoop-2.7.3/etc[aagarwal@hdserver etc]$ exit
-exit
-
-Script done on Sat 14 Sep 2019 07:39:23 PM EDT
