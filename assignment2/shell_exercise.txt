@@ -1,0 +1,55 @@
+Script started on Mon 07 Oct 2019 02:25:47 PM EDT
+]777;notify;Command completed;reboot]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[?1034h[aagaw29@hdserver assignment2]$ hdfs dfs -ls /[K[K[K[Kmkdir /ls[K[Kdata
+]777;notify;Command completed;hdfs dfs -mkdir /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -mkdir /testHDFS
+]777;notify;Command completed;hdfs dfs -mkdir /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls
+Found 2 items
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-06 16:18 input
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-06 16:19 output
+]777;notify;Command completed;hdfs dfs -ls]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /
+Found 3 items
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-07 14:26 /data
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-07 14:26 /testHDFS
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-06 16:17 /user
+]777;notify;Command completed;hdfs dfs -ls /]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ echo "HDFS test data [K" >testfi[K[KFile
+]777;notify;Command completed;echo "HDFS test data" >testFile]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ cat testFile
+HDFS test data
+]777;notify;Command completed;cat testFile]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -Cope[KyFromLocal testFile /data[1P[1@c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]777;notify;Command completed;hdfs dfs -copyFromLocal testFile /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /data
+Found 1 items
+-rw-r--r--   1 aagaw29 supergroup         15 2019-10-07 14:28 /data/testFile
+]777;notify;Command completed;hdfs dfs -ls /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ d[Khdfs dfs -cat /data/ters[K[KstFile
+HDFS test data
+]777;notify;Command completed;hdfs dfs -cat /data/testFile]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs s[Kdfs -mv /data/testFile /testHDFS
+]777;notify;Command completed;hdfs dfs -mv /data/testFile /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /testHDFS
+Found 1 items
+-rw-r--r--   1 aagaw29 supergroup         15 2019-10-07 14:28 /testHDFS/testFile
+]777;notify;Command completed;hdfs dfs -ls /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /testHDFS[K[K[K[K[K[K[K[Kdata
+]777;notify;Command completed;hdfs dfs -ls /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs -[Kdfs -cp /testHDFS/testFile /testDaa[K[K[KHDFS/testFi le2
+]777;notify;Command completed;hdfs dfs -cp /testHDFS/testFile /testHDFS/testFile2]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /testHDFS
+Found 2 items
+-rw-r--r--   1 aagaw29 supergroup         15 2019-10-07 14:28 /testHDFS/testFile
+-rw-r--r--   1 aagaw29 supergroup         15 2019-10-07 14:31 /testHDFS/testFile2
+]777;notify;Command completed;hdfs dfs -ls /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ [K[aagaw29@hdserver assignment2]$ [K[aagaw29@hdserver assignment2]$ [K[aagaw29@hdserver assignment2]$ [K[aagaw29@hdserver assignment2]$ hdfs dfs -df
+Filesystem                    Size    Used    Available  Use%
+hdfs://localhost:9000  18238930944  294964  11187662848    0%
+]777;notify;Command completed;hdfs dfs -df]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -df[Ku /testHDFS
+15  /testHDFS/testFile
+15  /testHDFS/testFile2
+]777;notify;Command completed;hdfs dfs -du /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ d[Khdfs dfs -rm /data
+rm: `/data': Is a directory
+]777;notify;Command completed;hdfs dfs -rm /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -rm /data-/datar/dataf/data /data
+-rm: Illegal option -rf
+Usage: hadoop fs [generic options] -rm [-f] [-r|-R] [-skipTrash] <src> ...
+]777;notify;Command completed;hdfs dfs -rm -rf /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -rm -rf /data[1P /data
+19/10/07 14:32:53 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /data
+]777;notify;Command completed;hdfs dfs -rm -r /data]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -rm -r /data\[K[K[K[K[KtestHDFS
+19/10/07 14:33:09 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /testHDFS
+]777;notify;Command completed;hdfs dfs -rm -r /testHDFS]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hdfs dfs -ls /
+Found 1 items
+drwxr-xr-x   - aagaw29 supergroup          0 2019-10-06 16:17 /user
+]777;notify;Command completed;hdfs dfs -ls /]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ exit
+exit
+
+Script done on Mon 07 Oct 2019 02:33:39 PM EDT

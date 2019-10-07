@@ -1,0 +1,147 @@
+Script started on Mon 07 Oct 2019 02:38:35 PM EDT
+]777;notify;Command completed;exit]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[?1034h[aagaw29@hdserver assignment2]$ mvn clean package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building assignment2 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ assignment2 ---
+[INFO] Deleting /home/aagaw29/hadoop/all_assignments/assignment2/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ assignment2 ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aagaw29/hadoop/all_assignments/assignment2/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ assignment2 ---
+[INFO] Compiling 1 source file to /home/aagaw29/hadoop/all_assignments/assignment2/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ assignment2 ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aagaw29/hadoop/all_assignments/assignment2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ assignment2 ---
+[INFO] Compiling 1 source file to /home/aagaw29/hadoop/all_assignments/assignment2/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ assignment2 ---
+[INFO] Surefire report directory: /home/aagaw29/hadoop/all_assignments/assignment2/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.jhu.bdpuh.HdfsClientTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ assignment2 ---
+[INFO] Building jar: /home/aagaw29/hadoop/all_assignments/assignment2/target/assignment2-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.6:single (make-assembly) @ assignment2 ---
+[INFO] Building jar: /home/aagaw29/hadoop/all_assignments/assignment2/target/assignment2-1.0-SNAPSHOT-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.101s
+[INFO] Finished at: Mon Oct 07 14:39:03 EDT 2019
+[INFO] Final Memory: 169M/405M
+[INFO] ------------------------------------------------------------------------
+]777;notify;Command completed;mvn clean package]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ java -cp target/assignment2-1.0-SNAPSHOT-jar-with-dep endencies.jar edu.jhu.bdpuh.HdfsClient -lsr ~/hadoop/current/etc
+Hello HDFS!
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.util.Shell).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+list files from: file:///
+Exception in thread "main" java.io.FileNotFoundException: File /home/aagaw29/hadoop/current/etc does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:431)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1517)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1557)
+	at org.apache.hadoop.fs.FileSystem$4.<init>(FileSystem.java:1714)
+	at org.apache.hadoop.fs.FileSystem.listLocatedStatus(FileSystem.java:1713)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listLocatedStatus(ChecksumFileSystem.java:689)
+	at org.apache.hadoop.fs.FileSystem$6.<init>(FileSystem.java:1791)
+	at org.apache.hadoop.fs.FileSystem.listFiles(FileSystem.java:1787)
+	at edu.jhu.bdpuh.HdfsClient.listFiles(HdfsClient.java:30)
+	at edu.jhu.bdpuh.HdfsClient.run(HdfsClient.java:50)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at edu.jhu.bdpuh.HdfsClient.main(HdfsClient.java:24)
+]777;notify;Command completed;java -cp target/assignment2-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.HdfsClient -lsr ~/hadoop/current/etc]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ java -cp target/assignment2-1.0-SNAPSHOT-jar-with-depeendencies.jar edu.jhu.bdpuh.HdfsClient -lsr ~/hadoop/current/etc[K[K[K[K[K[K[K[K[K[K[Ketc
+Hello HDFS!
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.util.Shell).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+list files from: file:///
+file:/home/aagaw29/hadoop/etc/hadoop/hadoop-env.cmd
+file:/home/aagaw29/hadoop/etc/hadoop/hadoop-metrics2.properties
+file:/home/aagaw29/hadoop/etc/hadoop/hadoop-policy.xml
+file:/home/aagaw29/hadoop/etc/hadoop/ssl-client.xml.example
+file:/home/aagaw29/hadoop/etc/hadoop/hadoop-metrics.properties
+file:/home/aagaw29/hadoop/etc/hadoop/log4j.properties
+file:/home/aagaw29/hadoop/etc/hadoop/ssl-server.xml.example
+file:/home/aagaw29/hadoop/etc/hadoop/httpfs-log4j.properties
+file:/home/aagaw29/hadoop/etc/hadoop/httpfs-signature.secret
+file:/home/aagaw29/hadoop/etc/hadoop/httpfs-site.xml
+file:/home/aagaw29/hadoop/etc/hadoop/httpfs-env.sh
+file:/home/aagaw29/hadoop/etc/hadoop/kms-acls.xml
+file:/home/aagaw29/hadoop/etc/hadoop/kms-log4j.properties
+file:/home/aagaw29/hadoop/etc/hadoop/kms-env.sh
+file:/home/aagaw29/hadoop/etc/hadoop/kms-site.xml
+file:/home/aagaw29/hadoop/etc/hadoop/container-executor.cfg
+file:/home/aagaw29/hadoop/etc/hadoop/yarn-env.cmd
+file:/home/aagaw29/hadoop/etc/hadoop/slaves
+file:/home/aagaw29/hadoop/etc/hadoop/yarn-env.sh
+file:/home/aagaw29/hadoop/etc/hadoop/capacity-scheduler.xml
+file:/home/aagaw29/hadoop/etc/hadoop/configuration.xsl
+file:/home/aagaw29/hadoop/etc/hadoop/mapred-env.cmd
+file:/home/aagaw29/hadoop/etc/hadoop/mapred-queues.xml.template
+file:/home/aagaw29/hadoop/etc/hadoop/mapred-env.sh
+file:/home/aagaw29/hadoop/etc/hadoop/hadoop-env.sh
+file:/home/aagaw29/hadoop/etc/hadoop/core-site.xml
+file:/home/aagaw29/hadoop/etc/hadoop/hdfs-site.xml
+file:/home/aagaw29/hadoop/etc/hadoop/mapred-site.xml
+file:/home/aagaw29/hadoop/etc/hadoop/yarn-site.xml
+]777;notify;Command completed;java -cp target/assignment2-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.HdfsClient -lsr ~/hadoop/etc]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ hadoop jar target/assignment2-1.0-SNAPSHOT-jar-with-d ependencies.jar edu.jhu.bdpuh.HdfsClient -lsr /
+
+Hello HDFS!
+list files from: hdfs://localhost:9000
+hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.sh
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+hdfs://localhost:9000/user/aagaw29/input/slaves
+hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+hdfs://localhost:9000/user/aagaw29/output/_SUCCESS
+hdfs://localhost:9000/user/aagaw29/output/part-r-00000
+]777;notify;Command completed;hadoop jar target/assignment2-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.HdfsClient -lsr /]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ 
+]777;notify;Command completed;hadoop jar target/assignment2-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.HdfsClient -lsr /]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment2]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment2[aagaw29@hdserver assignment2]$ exit
+exit
+
+Script done on Mon 07 Oct 2019 02:39:40 PM EDT
