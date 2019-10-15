@@ -1,0 +1,525 @@
+Script started on Mon 14 Oct 2019 10:09:27 PM EDT
+]777;notify;Command completed;exit]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[?1034h[aagaw29@hdserver assignment3]$ mvn clean package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.jhu.bdpuh:assignment3:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 36, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building assignment3 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ assignment3 ---
+[INFO] Deleting /home/aagaw29/hadoop/all_assignments/assignment3/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ assignment3 ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aagaw29/hadoop/all_assignments/assignment3/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ assignment3 ---
+[INFO] Compiling 6 source files to /home/aagaw29/hadoop/all_assignments/assignment3/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ assignment3 ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/aagaw29/hadoop/all_assignments/assignment3/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ assignment3 ---
+[INFO] Compiling 1 source file to /home/aagaw29/hadoop/all_assignments/assignment3/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ assignment3 ---
+[INFO] Surefire report directory: /home/aagaw29/hadoop/all_assignments/assignment3/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.jhu.bdpuh.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ assignment3 ---
+[INFO] Building jar: /home/aagaw29/hadoop/all_assignments/assignment3/target/assignment3-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.6:single (make-assembly) @ assignment3 ---
+[INFO] Building jar: /home/aagaw29/hadoop/all_assignments/assignment3/target/assignment3-1.0-SNAPSHOT-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 22.453s
+[INFO] Finished at: Mon Oct 14 22:09:55 EDT 2019
+[INFO] Final Memory: 173M/419M
+[INFO] ------------------------------------------------------------------------
+]777;notify;Command completed;mvn clean package]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependen cies.jar edu.jhu.bdpuh.App -lsr .
+Hello Hadoop World!
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.util.Shell).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+list files from: file:///
+file:/home/aagaw29/hadoop/all_assignments/assignment3/pom.xml
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/App.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/CATCmd.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/GETCmd.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/LSCmd.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/MkdirCmd.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/main/java/edu/jhu/bdpuh/RMCmd.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/src/test/java/edu/jhu/bdpuh/AppTest.java
+file:/home/aagaw29/hadoop/all_assignments/assignment3/README.md
+file:/home/aagaw29/hadoop/all_assignments/assignment3/assignment3.txt
+file:/home/aagaw29/hadoop/all_assignments/assignment3/cli_practice.txt
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/MkdirCmd.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/CATCmd.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/LSCmd.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/RMCmd.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/App.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/classes/edu/jhu/bdpuh/GETCmd.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/test-classes/edu/jhu/bdpuh/AppTest.class
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/surefire-reports/edu.jhu.bdpuh.AppTest.txt
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/surefire-reports/TEST-edu.jhu.bdpuh.AppTest.xml
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/maven-archiver/pom.properties
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/assignment3-1.0-SNAPSHOT.jar
+file:/home/aagaw29/hadoop/all_assignments/assignment3/target/assignment3-1.0-SNAPSHOT-jar-with-dependencies.jar
+]777;notify;Command completed;java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.App -lsr .]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdp uh.App -lsr .
+Hello Hadoop World!
+list files from: hdfs://localhost:9000
+hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.sh
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+hdfs://localhost:9000/user/aagaw29/input/slaves
+hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+hdfs://localhost:9000/user/aagaw29/output/_SUCCESS
+hdfs://localhost:9000/user/aagaw29/output/part-r-00000
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -lsr .]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -lsr .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cjava -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependenc[20@ies.jar edu.jhu.bdpu[C[C[C[C[C[C[C[C[C[C[C[C/user/aagaw29
+Hello Hadoop World!
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.util.Shell).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+list files from: file:///
+Exception in thread "main" java.io.FileNotFoundException: File user/aagaw29 does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:431)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1517)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1557)
+	at org.apache.hadoop.fs.FileSystem$4.<init>(FileSystem.java:1714)
+	at org.apache.hadoop.fs.FileSystem.listLocatedStatus(FileSystem.java:1713)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listLocatedStatus(ChecksumFileSystem.java:689)
+	at org.apache.hadoop.fs.FileSystem$6.<init>(FileSystem.java:1791)
+	at org.apache.hadoop.fs.FileSystem.listFiles(FileSystem.java:1787)
+	at edu.jhu.bdpuh.App.listFiles(App.java:33)
+	at edu.jhu.bdpuh.App.run(App.java:63)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at edu.jhu.bdpuh.App.main(App.java:27)
+]777;notify;Command completed;java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.App -lsr ./user/aagaw29]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependenccies.jar edu.jhu.bdpuh.App -lsr ./user/aagaw29[1P/user/aagaw29
+Hello Hadoop World!
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.util.Shell).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+list files from: file:///
+Exception in thread "main" java.io.FileNotFoundException: File /user/aagaw29 does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:431)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1517)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1557)
+	at org.apache.hadoop.fs.FileSystem$4.<init>(FileSystem.java:1714)
+	at org.apache.hadoop.fs.FileSystem.listLocatedStatus(FileSystem.java:1713)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listLocatedStatus(ChecksumFileSystem.java:689)
+	at org.apache.hadoop.fs.FileSystem$6.<init>(FileSystem.java:1791)
+	at org.apache.hadoop.fs.FileSystem.listFiles(FileSystem.java:1787)
+	at edu.jhu.bdpuh.App.listFiles(App.java:33)
+	at edu.jhu.bdpuh.App.run(App.java:63)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at edu.jhu.bdpuh.App.main(App.java:27)
+]777;notify;Command completed;java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependencies.jar edu.jhu.bdpuh.App -lsr /user/aagaw29]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ java -cp target/assignment3-1.0-SNAPSHOT-jar-with-dependenccies.jar edu.jhu.bdpuh.App -lsr /user/aagaw29[A[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdp uh.App -lsr .
+Hello Hadoop World!
+list files from: hdfs://localhost:9000
+hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.sh
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+hdfs://localhost:9000/user/aagaw29/input/slaves
+hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+hdfs://localhost:9000/user/aagaw29/output/_SUCCESS
+hdfs://localhost:9000/user/aagaw29/output/part-r-00000
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -lsr .]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -lsr .[K/user/aagaw29
+Hello Hadoop World!
+list files from: hdfs://localhost:9000
+hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.sh
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+hdfs://localhost:9000/user/aagaw29/input/slaves
+hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+hdfs://localhost:9000/user/aagaw29/output/_SUCCESS
+hdfs://localhost:9000/user/aagaw29/output/part-r-00000
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -lsr /user/aagaw29]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -lsr /user/aagaw29[1P /user/aagaw29[C[C[C[C[C[C[C[C[C[C[1P /user/aagaw29[C[C[C[C[C[C[C[C[C[1P /user/aagaw29[C[C[C[C[C[C[C[Cc /user/aagaw29[C[C[C[C[C[C[C[C[Ca /user/aagaw29[C[C[C[C[C[C[C[C[C[Ct /user/aagaw29[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/input/hadoop-end[Kv.sh
+Hello Hadoop World!
+cat cmd detected parsing options..
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Set Hadoop-specific environment variables here.
+
+# The only required environment variable is JAVA_HOME.  All others are
+# optional.  When running a distributed configuration it is best to
+# set JAVA_HOME in this file, so that it is correctly defined on
+# remote nodes.
+
+# The java implementation to use.
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-1.el7_7.x86_64
+
+# The jsvc implementation to use. Jsvc is required to run secure datanodes
+# that bind to privileged ports to provide authentication of data transfer
+# protocol.  Jsvc is not required if SASL is configured for authentication of
+# data transfer protocol using non-privileged ports.
+#export JSVC_HOME=${JSVC_HOME}
+
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+
+# Extra Java CLASSPATH elements.  Automatically insert capacity-scheduler.
+for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
+  if [ "$HADOOP_CLASSPATH" ]; then
+    export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$f
+  else
+    export HADOOP_CLASSPATH=$f
+  fi
+done
+
+# The maximum amount of heap to use, in MB. Default is 1000.
+#export HADOOP_HEAPSIZE=
+#export HADOOP_NAMENODE_INIT_HEAPSIZE=""
+
+# Extra Java runtime options.  Empty by default.
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true"
+
+# Command specific options appended to HADOOP_OPTS when specified
+export HADOOP_NAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_NAMENODE_OPTS"
+export HADOOP_DATANODE_OPTS="-Dhadoop.security.logger=ERROR,RFAS $HADOOP_DATANODE_OPTS"
+
+export HADOOP_SECONDARYNAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_SECONDARYNAMENODE_OPTS"
+
+export HADOOP_NFS3_OPTS="$HADOOP_NFS3_OPTS"
+export HADOOP_PORTMAP_OPTS="-Xmx512m $HADOOP_PORTMAP_OPTS"
+
+# The following applies to multiple commands (fs, dfs, fsck, distcp etc)
+export HADOOP_CLIENT_OPTS="-Xmx512m $HADOOP_CLIENT_OPTS"
+#HADOOP_JAVA_PLATFORM_OPTS="-XX:-UsePerfData $HADOOP_JAVA_PLATFORM_OPTS"
+
+# On secure datanodes, user to run the datanode as after dropping privileges.
+# This **MUST** be uncommented to enable secure HDFS if using privileged ports
+# to provide authentication of data transfer protocol.  This **MUST NOT** be
+# defined if SASL is configured for authentication of data transfer protocol
+# using non-privileged ports.
+export HADOOP_SECURE_DN_USER=${HADOOP_SECURE_DN_USER}
+
+# Where log files are stored.  $HADOOP_HOME/logs by default.
+#export HADOOP_LOG_DIR=${HADOOP_LOG_DIR}/$USER
+
+# Where log files are stored in the secure data environment.
+export HADOOP_SECURE_DN_LOG_DIR=${HADOOP_LOG_DIR}/${HADOOP_HDFS_USER}
+
+###
+# HDFS Mover specific parameters
+###
+# Specify the JVM options to be used when starting the HDFS Mover.
+# These options will be appended to the options specified as HADOOP_OPTS
+# and therefore may override any similar flags set in HADOOP_OPTS
+#
+# export HADOOP_MOVER_OPTS=""
+
+###
+# Advanced Users Only!
+###
+
+# The directory where pid files are stored. /tmp by default.
+# NOTE: this should be set to a directory that can only be written to by 
+#       the user that will run the hadoop daemons.  Otherwise there is the
+#       potential for a symlink attack.
+export HADOOP_PID_DIR=${HADOOP_PID_DIR}
+export HADOOP_SECURE_DN_PID_DIR=${HADOOP_PID_DIR}
+
+# A string representing this instance of hadoop. $USER by default.
+export HADOOP_IDENT_STRING=$USER
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -cat /user/aagaw29/input/hadoop-env.sh]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -cat /user/aagaw29/input/hadoop-env.sh[C[C[C[1P /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[C[C[C[1P /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[C[C[1P /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[Cg /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[C[Ce /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[C[C[Ct /user/aagaw29/input/hadoop-env.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ~/hadoop/all_assignments/ad[Kssignment3/
+Hello Hadoop World!
+get cmd detected parsing options..
+Exception in thread "main" java.io.FileNotFoundException: /home/aagaw29/hadoop/all_assignments/assignment3 (Is a directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at edu.jhu.bdpuh.GETCmd.getFile(GETCmd.java:48)
+	at edu.jhu.bdpuh.GETCmd.execute(GETCmd.java:75)
+	at edu.jhu.bdpuh.App.run(App.java:75)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at edu.jhu.bdpuh.App.main(App.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -get /user/aagaw29/input/hadoop-env.sh ~/hadoop/all_assignments/assignment3/]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -get /user/aagaw29/input/hadoop-env.sh ~/hadoop/all_assignments/assignment3/hadoop- env.sh
+Hello Hadoop World!
+get cmd detected parsing options..
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -get /user/aagaw29/input/hadoop-env.sh ~/hadoop/all_assignments/assignment3/hadoop-env.sh]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ ls
+assignment3.txt  cli_practice.txt  hadoop-env.sh  pom.xml  README.md  [0m[38;5;27msrc[0m  [38;5;27mtarget[0m
+]777;notify;Command completed;ls]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ cat hadoop-env.sh 
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Set Hadoop-specific environment variables here.
+
+# The only required environment variable is JAVA_HOME.  All others are
+# optional.  When running a distributed configuration it is best to
+# set JAVA_HOME in this file, so that it is correctly defined on
+# remote nodes.
+
+# The java implementation to use.
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-1.el7_7.x86_64
+
+# The jsvc implementation to use. Jsvc is required to run secure datanodes
+# that bind to privileged ports to provide authentication of data transfer
+# protocol.  Jsvc is not required if SASL is configured for authentication of
+# data transfer protocol using non-privileged ports.
+#export JSVC_HOME=${JSVC_HOME}
+
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
+
+# Extra Java CLASSPATH elements.  Automatically insert capacity-scheduler.
+for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
+  if [ "$HADOOP_CLASSPATH" ]; then
+    export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$f
+  else
+    export HADOOP_CLASSPATH=$f
+  fi
+done
+
+# The maximum amount of heap to use, in MB. Default is 1000.
+#export HADOOP_HEAPSIZE=
+#export HADOOP_NAMENODE_INIT_HEAPSIZE=""
+
+# Extra Java runtime options.  Empty by default.
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true"
+
+# Command specific options appended to HADOOP_OPTS when specified
+export HADOOP_NAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_NAMENODE_OPTS"
+export HADOOP_DATANODE_OPTS="-Dhadoop.security.logger=ERROR,RFAS $HADOOP_DATANODE_OPTS"
+
+export HADOOP_SECONDARYNAMENODE_OPTS="-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS} -Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_SECONDARYNAMENODE_OPTS"
+
+export HADOOP_NFS3_OPTS="$HADOOP_NFS3_OPTS"
+export HADOOP_PORTMAP_OPTS="-Xmx512m $HADOOP_PORTMAP_OPTS"
+
+# The following applies to multiple commands (fs, dfs, fsck, distcp etc)
+export HADOOP_CLIENT_OPTS="-Xmx512m $HADOOP_CLIENT_OPTS"
+#HADOOP_JAVA_PLATFORM_OPTS="-XX:-UsePerfData $HADOOP_JAVA_PLATFORM_OPTS"
+
+# On secure datanodes, user to run the datanode as after dropping privileges.
+# This **MUST** be uncommented to enable secure HDFS if using privileged ports
+# to provide authentication of data transfer protocol.  This **MUST NOT** be
+# defined if SASL is configured for authentication of data transfer protocol
+# using non-privileged ports.
+export HADOOP_SECURE_DN_USER=${HADOOP_SECURE_DN_USER}
+
+# Where log files are stored.  $HADOOP_HOME/logs by default.
+#export HADOOP_LOG_DIR=${HADOOP_LOG_DIR}/$USER
+
+# Where log files are stored in the secure data environment.
+export HADOOP_SECURE_DN_LOG_DIR=${HADOOP_LOG_DIR}/${HADOOP_HDFS_USER}
+
+###
+# HDFS Mover specific parameters
+###
+# Specify the JVM options to be used when starting the HDFS Mover.
+# These options will be appended to the options specified as HADOOP_OPTS
+# and therefore may override any similar flags set in HADOOP_OPTS
+#
+# export HADOOP_MOVER_OPTS=""
+
+###
+# Advanced Users Only!
+###
+
+# The directory where pid files are stored. /tmp by default.
+# NOTE: this should be set to a directory that can only be written to by 
+#       the user that will run the hadoop daemons.  Otherwise there is the
+#       potential for a symlink attack.
+export HADOOP_PID_DIR=${HADOOP_PID_DIR}
+export HADOOP_SECURE_DN_PID_DIR=${HADOOP_PID_DIR}
+
+# A string representing this instance of hadoop. $USER by default.
+export HADOOP_IDENT_STRING=$USER
+]777;notify;Command completed;cat hadoop-env.sh ]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ cat hadoop-env.sh ls[Khadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -get /user/aagaw29/input/hadoop-env.sh ~/hadoop/all_assignments/assignment3/hadoop-eenv.sh[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[C[C[1P[1P[1P[1@r[1@m
+Hello Hadoop World!
+rm cmd detected parsing options..
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -rm /user/aagaw29/input/hadoop-env.sh ]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -rm /user/aagaw29/input/hadoop-env.sh [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P[1P[1@l[1@s
+Hello Hadoop World!
+ls cmd detected parsing options..
+-rw-r--r--	1 aagaw29 supergroup	4436 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+-rw-r--r--	1 aagaw29 supergroup	1335 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+-rw-r--r--	1 aagaw29 supergroup	318 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+-rw-r--r--	1 aagaw29 supergroup	866 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+-rw-r--r--	1 aagaw29 supergroup	3589 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+-rw-r--r--	1 aagaw29 supergroup	2490 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+-rw-r--r--	1 aagaw29 supergroup	2598 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+-rw-r--r--	1 aagaw29 supergroup	9683 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+-rw-r--r--	1 aagaw29 supergroup	849 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+-rw-r--r--	1 aagaw29 supergroup	1449 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+-rw-r--r--	1 aagaw29 supergroup	1657 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+-rw-r--r--	1 aagaw29 supergroup	21 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+-rw-r--r--	1 aagaw29 supergroup	620 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+-rw-r--r--	1 aagaw29 supergroup	3518 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+-rw-r--r--	1 aagaw29 supergroup	1527 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+-rw-r--r--	1 aagaw29 supergroup	1631 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+-rw-r--r--	1 aagaw29 supergroup	5511 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+-rw-r--r--	1 aagaw29 supergroup	11237 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+-rw-r--r--	1 aagaw29 supergroup	931 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+-rw-r--r--	1 aagaw29 supergroup	1383 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+-rw-r--r--	1 aagaw29 supergroup	4113 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+-rw-r--r--	1 aagaw29 supergroup	758 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+-rw-r--r--	1 aagaw29 supergroup	10 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/slaves
+-rw-r--r--	1 aagaw29 supergroup	2316 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+-rw-r--r--	1 aagaw29 supergroup	2268 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+-rw-r--r--	1 aagaw29 supergroup	2191 Sun Oct 06 16:18:20 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+-rw-r--r--	1 aagaw29 supergroup	4567 Sun Oct 06 16:18:21 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+-rw-r--r--	1 aagaw29 supergroup	690 Sun Oct 06 16:18:21 EDT 2019	hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -ls /user/aagaw29/input/ ]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuuh.App -ls /user/aagaw29/input/ [1@r
+Hello Hadoop World!
+list files from: hdfs://localhost:9000
+hdfs://localhost:9000/user/aagaw29/input/capacity-scheduler.xml
+hdfs://localhost:9000/user/aagaw29/input/configuration.xsl
+hdfs://localhost:9000/user/aagaw29/input/container-executor.cfg
+hdfs://localhost:9000/user/aagaw29/input/core-site.xml
+hdfs://localhost:9000/user/aagaw29/input/hadoop-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-metrics2.properties
+hdfs://localhost:9000/user/aagaw29/input/hadoop-policy.xml
+hdfs://localhost:9000/user/aagaw29/input/hdfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/httpfs-env.sh
+hdfs://localhost:9000/user/aagaw29/input/httpfs-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/httpfs-signature.secret
+hdfs://localhost:9000/user/aagaw29/input/httpfs-site.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-acls.xml
+hdfs://localhost:9000/user/aagaw29/input/kms-env.sh
+hdfs://localhost:9000/user/aagaw29/input/kms-log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/kms-site.xml
+hdfs://localhost:9000/user/aagaw29/input/log4j.properties
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/mapred-env.sh
+hdfs://localhost:9000/user/aagaw29/input/mapred-queues.xml.template
+hdfs://localhost:9000/user/aagaw29/input/mapred-site.xml
+hdfs://localhost:9000/user/aagaw29/input/slaves
+hdfs://localhost:9000/user/aagaw29/input/ssl-client.xml.example
+hdfs://localhost:9000/user/aagaw29/input/ssl-server.xml.example
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.cmd
+hdfs://localhost:9000/user/aagaw29/input/yarn-env.sh
+hdfs://localhost:9000/user/aagaw29/input/yarn-site.xml
+]777;notify;Command completed;hadoop jar target/assignment3-1.0-SNAPSHOT.jar edu.jhu.bdpuh.App -lsr /user/aagaw29/input/ ]0;aagaw29@hdserver:~/hadoop/all_assignments/assignment3]7;file://hdserver/home/aagaw29/hadoop/all_assignments/assignment3[aagaw29@hdserver assignment3]$ exit
+exit
+
+Script done on Mon 14 Oct 2019 10:14:09 PM EDT
