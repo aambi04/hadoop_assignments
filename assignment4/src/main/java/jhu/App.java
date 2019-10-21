@@ -1,6 +1,7 @@
 package jhu;
 
 import jhu.wordcount.WCDriver;
+import jhu.searchindex.SIDriver;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -30,6 +31,13 @@ public class App extends Configured implements Tool
         conf.set("outputPath", output);
         return ToolRunner.run(conf, new WCDriver(), new String[]{});
     }
+    
+    int runSearchIndex(String input, String output) throws Exception {
+        Configuration conf = getConf();
+        conf.set("inputPath", input);
+        conf.set("outputPath", output);
+        return ToolRunner.run(conf, new SIDriver(), new String[]{});
+    }
 
     void showUsage() {
         System.out.println("Usage: ");
@@ -40,8 +48,11 @@ public class App extends Configured implements Tool
         if(strings.length > 0) {
             if (strings[0].equals("wordcount") && strings.length == 3) {
                 return runWordCount(strings[1], strings[2]);
+            } 
+	    else if (strings[0].equals("searchindex") && strings.length == 3) {
+		return runSearchIndex(strings[1], strings[2]);
             }
-        }
+	}
         showUsage();
 
         return -1;
