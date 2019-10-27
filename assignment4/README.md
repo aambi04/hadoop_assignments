@@ -1,5 +1,5 @@
 # Student Information
-<put your name and email here for identification purposes>
+Ambika Agarwal, aagarw29@jhu.edu
 
 # Programming Assignment 4 - Map Reduce Introduction
 In this assignment you will modify a maven project by adding code to 
@@ -133,16 +133,14 @@ searchindex \<inputPath\> \<outputPath\> | Builds a search index
 Please answer each section or state "none".
 
 ## Problems Encountered / how you resolved them
-<did you encounter any interesting issues? 
-How did you resolve them?>
+In the beginning, my changes were not being reflected in the output files. This was unclear that we needed to run mvn clean package to create a new snapshot. 
+Another challenge I encountered was getting the list of stop words. I found a list used in the nltk package and added it as an array. 
 
 ## Resources you found helpful
-<did you find a really good reference?
-Please share them here>
+none
 
 ## Describe any help you recieved
-<did you discuss the problems you were having with others?
-Discussion is encouraged as long as you do not share specific solutions>
+none
 
 ## Make recommendations for improvement
-<How should I improve this assignment?>
+none
