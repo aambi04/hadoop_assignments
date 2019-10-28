@@ -1,5 +1,5 @@
 # Student Information
-<put your name and email here for identification purposes>
+Ambika Agarwal, aagarw29@jhu.edu
 
 # Programming Assignment 5 - Map Reduce Wrangling
 In this assignment you will be working with a structured data set and extracting insights from the data.
