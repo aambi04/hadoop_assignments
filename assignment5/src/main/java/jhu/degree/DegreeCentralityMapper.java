@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -18,10 +17,9 @@ import java.util.Set;
 /**
  * Created by wilsopw1 on 2/25/17.
  */
-public class DegreeCentralityMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+public class DegreeCentralityMapper extends Mapper<LongWritable, Text, Text, Text> {
     Gson gson = new GsonBuilder().create();
     String inputPath = null;
-    IntWritable One = new IntWritable(1);
 
     @Override
     protected void setup(Context context) throws IOException, InterruptedException {
@@ -43,11 +41,11 @@ public class DegreeCentralityMapper extends Mapper<LongWritable, Text, Text, Int
         EmailMessage message = gson.fromJson(value.toString(), EmailMessage.class);
         for(String k : message.header.keySet()) {
             if(k.equals("From"))
-                context.write(new Text((String)message.header.get(k)), One);
+                context.write(new Text((String)message.header.get(k)), new Text("out"));
             if(k.equals("To") || k.equals("Cc") || k.equals("Bcc")) {
                 List<String> emails = (List<String>)message.header.get(k);
                 for(String e : emails)
-                    context.write(new Text(e), One);
+                    context.write(new Text(e), new Text("in"));
             }
 
         }
