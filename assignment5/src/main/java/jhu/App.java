@@ -1,6 +1,8 @@
 package jhu;
 
 import jhu.enron.EnronDriver;
+import jhu.graph.GraphEnronDriver;
+import jhu.degree.DegreeCentralityDriver;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.util.Tool;
@@ -25,6 +27,19 @@ public class App extends Configured implements Tool
         conf.set("outputPath", output);
         return ToolRunner.run(conf, new EnronDriver(), new String[]{});
     }
+    int runEronGraph(String input, String output) throws Exception {
+        Configuration conf = getConf();
+        conf.set("inputPath", input);
+        conf.set("outputPath", output);
+        return ToolRunner.run(conf, new GraphEnronDriver(), new String[]{});
+    }
+
+   int runDegreeCentrality(String input, String output) throws Exception {
+        Configuration conf = getConf();
+        conf.set("inputPath", input);
+        conf.set("outputPath", output);
+        return ToolRunner.run(conf, new DegreeCentralityDriver(), new String[]{});
+    }
 
     void showUsage() {
         System.out.println("Usage: ");
@@ -36,8 +51,13 @@ public class App extends Configured implements Tool
             if (strings[0].equals("enron-stats") && strings.length == 3) {
                 return runEnron(strings[1], strings[2]);
             }
+	    else if (strings[0].equals("enron-graph") && strings.length == 3) {
+	    	return runEronGraph(strings[1], strings[2]);
+	    } else if (strings[0].equals("degree-centrality") && strings.length == 3) {
+		return runDegreeCentrality(strings[1], strings[2]);
+	}
         }
-        showUsage();
+	showUsage();
 
         return -1;
     }
