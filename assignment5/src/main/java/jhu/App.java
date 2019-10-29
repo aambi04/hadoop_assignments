@@ -45,26 +45,23 @@ System.out.printf("HERE");
 	Configuration conf = getConf();
 	int i = 1;
 	String options;
-	for (String temp: arguments) {
-		System.out.printf(temp + " ");
-}
+   
         while (i < arguments.length && arguments[i].startsWith("-")) {
 		options = arguments[i];
 		i += 1;
-		System.out.printf("options %s, ", options);	
-	if (options.equals("-tt")) {
+		if (options.equals("-tt")) {
 			conf.set("tt", arguments[i]);	
-	} else if (options.equals("-ct")) {
+		} else if (options.equals("-ct")) {
 			conf.set("ct", arguments[i]);
 		}
-	i += 1;
+		i += 1;
 	}
  	
 	conf.set("inputPath", arguments[i]);
 	conf.set("outputPath", arguments[i+1]);
 	
 	return ToolRunner.run(conf, new DegreeCentralityDriver(), new String[]{});
-	}
+   }
 
     void showUsage() {
         System.out.println("Usage: ");
@@ -80,10 +77,10 @@ System.out.printf("HERE");
 	    	return runEronGraph(strings[1], strings[2]);
 	    } else if (strings[0].equals("degree-centrality") && strings.length <= 3) {
 		return runDegreeCentrality(strings[1], strings[2]);
-	} else if (strings[0].equals("degree-centrality") && strings.length > 3) {
+	    } else if (strings[0].equals("degree-centrality") && strings.length > 3) {
 		return runDegreeCentralityOptions(strings);
+	    }
 	}
-}
 	showUsage();
 
         return -1;
