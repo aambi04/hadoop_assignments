@@ -23,6 +23,7 @@ public class DegreeCentralityDriver extends Configured implements Tool {
 	String ct = conf.get("ct");
 	String tt = conf.get("tt");
 	
+	// set ct and tt to 0 by default if they are empty values in cli
 	if (ct == null) {
 		ct = "0";
 		conf.set("ct", "0");
@@ -31,7 +32,6 @@ public class DegreeCentralityDriver extends Configured implements Tool {
 		tt = "0";
 		conf.set("tt", "0");
 	}
-        System.out.printf("Degree Centrality Driver: %s %s %s %s\n", inputPath, outputPath, ct, tt);
         Job job = Job.getInstance(conf, "Degree Centrality Processor");
         job.setJarByClass(getClass());
 
