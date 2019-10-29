@@ -29,7 +29,6 @@ public class GraphEnronDriver extends Configured implements Tool {
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
         job.setReducerClass(GraphEnronReducer.class);
-//        job.setCombinerClass(GraphEnronReducer.class);
         job.setNumReduceTasks(1);
 
         FileInputFormat.addInputPath(job, new Path(inputPath));
