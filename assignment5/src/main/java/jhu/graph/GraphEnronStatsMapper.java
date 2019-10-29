@@ -41,19 +41,19 @@ public class GraphEnronStatsMapper extends Mapper<LongWritable, Text, Text, Text
         EmailMessage message = gson.fromJson(value.toString(), EmailMessage.class);
         String sender = "";
 	for(String k : message.header.keySet()) {
-            if(k.equals("From"))
+            if(k.equals("From")) {
             	sender = ((String) message.header.get(k));
-	     else if(k.equals("To")) {
+	    } else if(k.equals("To")) {
                 List<String> emails = (List<String>) message.header.get(k);
 		for (String e : emails) {
 			context.write(new Text(sender + " " + e), new Text("to"));
-	      }
-		} else if (k.equals("Cc")) {
+		}
+	    } else if (k.equals("Cc")) {
 		List<String> emails_cc = (List<String>) message.header.get(k);
                 for (String e_cc : emails_cc) {
 			context.write(new Text(sender + " " + e_cc), new Text("cc"));
 		}     
-		}	
+	    }	
         }
    }
 }
