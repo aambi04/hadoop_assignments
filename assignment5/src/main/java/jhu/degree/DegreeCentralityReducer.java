@@ -24,6 +24,7 @@ public class DegreeCentralityReducer extends Reducer<Text, Text, Text, Text> {
 	int sum_to = 0;
 	int sum_cc = 0;
         for(Text i : values) {
+	// sum up the number of edges going in and out for each email
             if (i.toString().equals("to")) {
 		sum_to += 1;
 	    } else if (i.toString().equals("out")) {
@@ -33,7 +34,7 @@ public class DegreeCentralityReducer extends Reducer<Text, Text, Text, Text> {
 	    }
         }
         if (sum_cc >= Integer.parseInt(ct) && sum_to >= Integer.parseInt(tt)) { 
-	context.write(new Text(key), new Text(Integer.toString(sum_to + sum_cc) + " " + Integer.toString(sum_out)));
+	    context.write(new Text(key), new Text(Integer.toString(sum_to + sum_cc) + " " + Integer.toString(sum_out)));
 	}
     }
 }
