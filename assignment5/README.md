@@ -118,11 +118,9 @@ Please provide your analysis of the email data based upon what you can determine
 You are free to analyze the output of your job using any means you have available.
 
 ### Describe the resulting graph
-For example, how many nodes and edges are there? 
-
+>The graph is a directed network where each node has an in degree and an out degree. The number of nodes were equal to the >number of unique emails in the data set. The in edges represented how often the email was either cc'ed or ssent directly to >from other emails. The out edges represented how often the email sent out emails to others. 
 ### What can degree centrality tell us?
-Are there relationships that really stick out? 
-
+>Degree centrality can show us meaningful relationships between the nodes aka emails. We can see nodes with a high frequency >of to or cc can be looked as more important people that need to know more information. Nodes/emails with a higher out >frequency can be looked as someone who sends out a lot of information. We can go further by using our optional thresholds for >cc and to and see how often someone someone should have the information sent out in the email but maybe is not expected to >respond. 
 ### Any additional insights you have
 
 
@@ -139,16 +137,13 @@ degree-centrality [-tt #] [-ct #] \<inputPath\> \<outputPath\> | Produce the deg
 Please answer each section or state "none".
 
 ## Problems Encountered / how you resolved them
-<did you encounter any interesting issues? 
-How did you resolve them?>
+>Allocating space for the 1.6MB file was a challange. I had to find more space to place the file and run the json formatting. >Eventually i opened up space by running the `df -l` command and removed unnecesarry files in my local file system. Another >challange I had was understanding if Bcc should be treated the same as Cc. I decided to keep them separate because they are >technically two different fields and have different features in the email listing.
 
 ## Resources you found helpful
-<did you find a really good reference?
-Please share them here>
-
+>I found the Apache library website very useful to understand how to set the config values and use them in my map and reduce >files. https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client->core/apidocs/org/apache/hadoop/mapreduce/JobContext.html#getConfiguration--
+>I also used this website to understand how to parse the command line and read in the options >http://journals.ecs.soton.ac.uk/java/tutorial/java/cmdLineArgs/parsing.html. 
 ## Describe any help you recieved
-<did you discuss the problems you were having with others?
-Discussion is encouraged as long as you do not share specific solutions>
+>none
 
 ## Make recommendations for improvement
-<How should I improve this assignment?>
+>Adding an output threshold for the degree centrality would have been fun to look at. 
