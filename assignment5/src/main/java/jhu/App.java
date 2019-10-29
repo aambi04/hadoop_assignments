@@ -16,7 +16,6 @@ import org.apache.log4j.PropertyConfigurator;
 public class App extends Configured implements Tool
 {
     public static void main( String[] args ) throws Exception {
-        PropertyConfigurator.configure("/etc/hadoop/log4j.properties");
         int ret = ToolRunner.run(new Configuration(), new App(), args);
         System.exit(ret);
     }
@@ -38,8 +37,34 @@ public class App extends Configured implements Tool
         Configuration conf = getConf();
         conf.set("inputPath", input);
         conf.set("outputPath", output);
-        return ToolRunner.run(conf, new DegreeCentralityDriver(), new String[]{});
+System.out.printf("HERE");    
+    return ToolRunner.run(conf, new DegreeCentralityDriver(), new String[]{});
     }
+
+   int runDegreeCentralityOptions(String[] arguments) throws Exception {
+	Configuration conf = getConf();
+	int i = 1;
+	String options;
+	for (String temp: arguments) {
+		System.out.printf(temp + " ");
+}
+        while (i < arguments.length && arguments[i].startsWith("-")) {
+		options = arguments[i];
+		i += 1;
+		System.out.printf("options %s, ", options);	
+	if (options.equals("-tt")) {
+			conf.set("tt", arguments[i]);	
+	} else if (options.equals("-ct")) {
+			conf.set("ct", arguments[i]);
+		}
+	i += 1;
+	}
+ 	
+	conf.set("inputPath", arguments[i]);
+	conf.set("outputPath", arguments[i+1]);
+	
+	return ToolRunner.run(conf, new DegreeCentralityDriver(), new String[]{});
+	}
 
     void showUsage() {
         System.out.println("Usage: ");
@@ -53,10 +78,12 @@ public class App extends Configured implements Tool
             }
 	    else if (strings[0].equals("enron-graph") && strings.length == 3) {
 	    	return runEronGraph(strings[1], strings[2]);
-	    } else if (strings[0].equals("degree-centrality") && strings.length == 3) {
+	    } else if (strings[0].equals("degree-centrality") && strings.length <= 3) {
 		return runDegreeCentrality(strings[1], strings[2]);
+	} else if (strings[0].equals("degree-centrality") && strings.length > 3) {
+		return runDegreeCentralityOptions(strings);
 	}
-        }
+}
 	showUsage();
 
         return -1;

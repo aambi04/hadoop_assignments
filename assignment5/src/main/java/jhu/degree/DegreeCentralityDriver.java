@@ -20,8 +20,18 @@ public class DegreeCentralityDriver extends Configured implements Tool {
         Configuration conf = getConf();
         String inputPath = conf.get("inputPath");
         String outputPath = conf.get("outputPath");
-
-        System.out.printf("Degree Centrality Driver: %s %s\n", inputPath, outputPath);
+	String ct = conf.get("ct");
+	String tt = conf.get("tt");
+	
+	if (ct == null) {
+		ct = "0";
+		conf.set("ct", "0");
+	} 
+	if (tt == null) {
+		tt = "0";
+		conf.set("tt", "0");
+	}
+        System.out.printf("Degree Centrality Driver: %s %s %s %s\n", inputPath, outputPath, ct, tt);
         Job job = Job.getInstance(conf, "Degree Centrality Processor");
         job.setJarByClass(getClass());
 

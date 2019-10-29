@@ -42,11 +42,17 @@ public class DegreeCentralityMapper extends Mapper<LongWritable, Text, Text, Tex
         for(String k : message.header.keySet()) {
             if(k.equals("From"))
                 context.write(new Text((String)message.header.get(k)), new Text("out"));
-            if(k.equals("To") || k.equals("Cc") || k.equals("Bcc")) {
+            if(k.equals("To")) {
                 List<String> emails = (List<String>)message.header.get(k);
                 for(String e : emails)
-                    context.write(new Text(e), new Text("in"));
+                    context.write(new Text(e), new Text("to"));
             }
+	    if (k.equals("Cc")) {
+		List<String> emails_cc = (List<String>)message.header.get(k);
+                for(String e_cc : emails_cc)
+                    context.write(new Text(e_cc), new Text("cc"));
+
+	    }
 
         }
 

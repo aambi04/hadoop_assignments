@@ -6,8 +6,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
- * Created by wilsopw1 on 2/25/17.
- */
+ *  * Created by wilsopw1 on 2/25/17.
+ *   */
 public class DegreeCentralityReducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
@@ -17,15 +17,23 @@ public class DegreeCentralityReducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-        int sum_in = 0;
-	int sum_out = 0;
+ 	String ct = context.getConfiguration().get("ct");
+	String tt = context.getConfiguration().get("tt");
+
+        int sum_out = 0;
+	int sum_to = 0;
+	int sum_cc = 0;
         for(Text i : values) {
-            if (i.toString().equals("out")) {
+            if (i.toString().equals("to")) {
+		sum_to += 1;
+	    } else if (i.toString().equals("out")) {
 		sum_out += 1;
-	    } else if (i.toString().equals("in")) {
-		sum_in += 1;
+	    } else if (i.toString().equals("cc")) {
+	   	sum_cc += 1;
 	    }
         }
-        context.write(new Text(key), new Text(Integer.toString(sum_in) + " " + Integer.toString(sum_out)));
+        if (sum_cc >= Integer.parseInt(ct) && sum_to >= Integer.parseInt(tt)) { 
+	context.write(new Text(key), new Text(Integer.toString(sum_to + sum_cc) + " " + Integer.toString(sum_out)));
+	}
     }
 }
