@@ -1,0 +1,189 @@
+Script started on Sat 09 Nov 2019 08:23:01 PM EST
+]777;notify;Command completed;exit]0;aagaw29@hdserver:~/hadoop_assignments/HBaseAssignment]7;file://hdserver/home/aagaw29/hadoop_assignments/HBaseAssignment[?1034h[aagaw29@hdserver HBaseAssignment]$ hbase shell
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/aagaw29/hadoop/hbase-1.2.4/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/aagaw29/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+HBase Shell; enter 'help<RETURN>' for list of supported commands.
+Type "exit<RETURN>" to leave the HBase Shell
+Version 1.2.4, r67592f3d062743907f8c5ae00dbbe1ae4f69e5af, Tue Oct 25 18:10:20 CDT 2016
+
+hbase(main):001:0> create[25G[J[24G[J[23G[J[22G[J[21G[J[20G[Jlist
+TABLE                                                                    
+0 row(s) in 0.1630 seconds
+
+=> []
+hbase(main):002:0> create 'u[28G[JUser','[34G[J 'creds', 'prefs', 'lastlogin'
+0 row(s) in 1.2570 seconds
+
+=> Hbase::Table - User
+hbase(main):003:0> list
+TABLE                                                                    
+User                                                                     
+1 row(s) in 0.0140 seconds
+
+=> ["User"]
+hbase(main):004:0> scan U[25G[J'User'
+ROW                 COLUMN+CELL                                          
+0 row(s) in 0.1140 seconds
+
+hbase(main):005:0> put 'User', 'js[34G[J[33G[Jkss', 'credsL:[46G[J[45G[J:email', 'k@s.com'
+0 row(s) in 0.0920 seconds
+
+hbase(main):006:0> put 'User', 'kss', 'creds:email', 'k@s.com'[62G[63G[62G[61G'[J[61G[60G'[J[60G[59G'[J[59G[58G'[J[58G[57G'[J[57G[56G'[J[56G[55G'[J[55Gm'[56Gy'[57Gp'[58Ga'[59Gs'[60Gs'[61Gw'[62Gd'[63G[62G[61G[60G[59G[58G[57G[56G[55G[54G[53G[52G[51G[50G', 'mypasswd'[J[50G[49G', 'mypasswd'[J[49G[48G', 'mypasswd'[J[48G[47G', 'mypasswd'[J[47G[46G', 'mypasswd'[J[46Gp', 'mypasswd'[47Ga', 'mypasswd'[48Gs', 'mypasswd'[49Gs', 'mypasswd'[50Gw', 'mypasswd'[51Go', 'mypasswd'[52Gr', 'mypasswd'[53Gd', 'mypasswd'[54G[67G
+0 row(s) in 0.0270 seconds
+
+hbase(main):007:0> put 'User' [30G[J, 'kss', 'prefs:sa[47G[Jtatus', 'marrid[61G[Jed'
+0 row(s) in 0.0310 seconds
+
+hbase(main):008:0> put 'Usr[27G[Jer', 'kss', 'perfs[44G[J[43G[J[42G[J[41G[Jrefs:data[49G[Je_of_birth', '1970/06/03'
+0 row(s) in 0.0280 seconds
+
+hbase(main):009:0> put 'User', 'kss', 'prefs:security_quesrio[61G[J[60G[J[59G[Jtion'. [65G[J[64G[J, 'favority_[2G[J[1G[J[1A[73G[J[Jte_color', [10G[J[9G[J
+0 row(s) in 0.0150 seconds
+
+hbase(main):010:0> put 'User', 'kss', 'prefs:L[46G[Jser[48G[Jcurity_answer', 'red'
+0 row(s) in 0.0110 seconds
+
+hbase(main):011:0> scan 'User'
+ROW                 COLUMN+CELL                                          
+ kss                column=creds:email, timestamp=1573349055420, value=k@
+                    s.com                                                
+ kss                column=creds:password, timestamp=1573349068325, value
+                    =mypasswd                                            
+ kss                column=prefs:date_of_birth, timestamp=1573349114795, 
+                    value=1970/06/03                                     
+ kss                column=prefs:security_answer, timestamp=1573349171410
+                    , value=red                                          
+ kss                column=prefs:security_question, timestamp=15733491541
+                    12, value=favorite_color                             
+ kss                column=prefs:status, timestamp=1573349093062, value=m
+                    arried                                               
+1 row(s) in 0.0290 seconds
+
+hbase(main):012:0> delevt[25G[J[24G[Jte 'User', 'kss'
+
+ERROR: wrong number of arguments (2 for 3)
+
+Here is some help for this command:
+Put a delete cell value at specified table/row/column and optionally
+timestamp coordinates.  Deletes must match the deleted cell's
+coordinates exactly.  When scanning, a delete cell suppresses older
+versions. To delete a cell from  't1' at row 'r1' under column 'c1'
+marked with the time 'ts1', do:
+
+  hbase> delete 'ns1:t1', 'r1', 'c1', ts1
+  hbase> delete 't1', 'r1', 'c1', ts1
+  hbase> delete 't1', 'r1', 'c1', ts1, {VISIBILITY=>'PRIVATE|SECRET'}
+
+The same command can also be run on a table reference. Suppose you had a reference
+t to table 't1', the corresponding command would be:
+
+  hbase> t.delete 'r1', 'c1',  ts1
+  hbase> t.delete 'r1', 'c1',  ts1, {VISIBILITY=>'PRIVATE|SECRET'}
+
+
+hbase(main):013:0> delete 'User', 'kss'[20G[Jscan 'User'[20G[Jput 'User', 'kss', 'prefs:security_answer', 'red'[55G[Jquestion', 'favorite_color'[1A[46G[J[Jdate_of_birth', '1970/06/03'[1A[46G[J[Jstatus', 'married'[40G[Jcreds:password', 'mypasswd'[46G[Jemail', 'k@s.com'[20G[Jscan 'User'[20G[Jlist[20G[Jcreate 'User', 'creds', 'prefs', 'lastlogin'[20G[Jlist[20G[Jcreate 'User', 'creds', 'prefs', 'lastlogin'[20G[Jlist[20G[Jscan 'User'[20G[Jput 'User', 'kss', 'creds:email', 'k@s.com'[46G[Jpassword', 'mypasswd'[40G[Jprefs:status', 'married'[46G[Jdate_of_birth', '1970/06/03'[1A[46G[J[Jsecurity_question', 'favorite_color'[1A[55G[J[Janswer', 'red'[20G[Jscan 'User'[20G[Jdelete 'User', 'kss'[20G[J
+hbase(main):014:0* 
+hbase(main):015:0* put 'User' 'kss'[35G[J1'[36G[35G[34G[33G[32G[31G[30G, 'kss1'[31G[32G[33G[34G[35G[36G[37G[38G, 'creds:email', 'k1@s.com'
+0 row(s) in 0.0110 seconds
+
+hbase(main):016:0> put 'User', 'kss1', 'creds:email', 'k1@s.com'[64G[63G[62G[61G[60G[59G[58G[57G[56G[55G[54G[53G[52G[51G[52G[51G', 'k1@s.com'[J[51G[50G', 'k1@s.com'[J[50G[49G', 'k1@s.com'[J[49G[48G', 'k1@s.com'[J[48G[47G', 'k1@s.com'[J[47Gp', 'k1@s.com'[48Ga', 'k1@s.com'[49Gs', 'k1@s.com'[50Gs', 'k1@s.com'[51Gw', 'k1@s.com'[52Go', 'k1@s.com'[53Gr', 'k1@s.com'[54Gd', 'k1@s.com'[55G[56G[57G[58G[59G[60G[61G[62G[63G[64G[65G[66G[67G[66G'[J[66G[65G'[J[65G[64G'[J[64G[63G'[J[63G[62G'[J[62G[61G'[J[61G[60G'[J[60G[59G'[J[59Gm'[60Gy'[61Gp'[62Ga'[63Gs'[64Gs'[65Gw'[66Gd'[67G[68G
+0 row(s) in 0.0080 seconds
+
+hbase(main):017:0> scan 'User'
+ROW                 COLUMN+CELL                                          
+ kss                column=creds:email, timestamp=1573349055420, value=k@
+                    s.com                                                
+ kss                column=creds:password, timestamp=1573349068325, value
+                    =mypasswd                                            
+ kss                column=prefs:date_of_birth, timestamp=1573349114795, 
+                    value=1970/06/03                                     
+ kss                column=prefs:security_answer, timestamp=1573349171410
+                    , value=red                                          
+ kss                column=prefs:security_question, timestamp=15733491541
+                    12, value=favorite_color                             
+ kss                column=prefs:status, timestamp=1573349093062, value=m
+                    arried                                               
+ kss1               column=creds:email, timestamp=1573349377078, value=k1
+                    @s.com                                               
+ kss1               column=creds:password, timestamp=1573349391184, value
+                    =mypasswd                                            
+2 row(s) in 0.0630 seconds
+
+hbase(main):018:0> put 'kss',[29G[J[28G[J[27G[J[26G[J[25G[JUser', 'kss', 'lastlogin:ip', '128.220.101.100'
+0 row(s) in 0.0130 seconds
+
+hbase(main):019:0> put 'User;, [31G[J[30G[J[29G[J[28G[Jr', 'kss', 'lastlogin:date', '2019/11/09'
+0 row(s) in 0.0200 seconds
+
+hbase(main):020:0> pur '[24G[J[23G[J[22G[Jt 'User', 'kss', 'lastlogin:time', '08:33:42"[66G[J'
+0 row(s) in 0.0250 seconds
+
+hbase(main):021:0> put 'User', 'kss', 'lastloginLs[50G[J[49G[J:success', 'yes'
+0 row(s) in 0.0170 seconds
+
+hbase(main):022:0> scan 'User'
+ROW                 COLUMN+CELL                                          
+ kss                column=creds:email, timestamp=1573349055420, value=k@
+                    s.com                                                
+ kss                column=creds:password, timestamp=1573349068325, value
+                    =mypasswd                                            
+ kss                column=lastlogin:date, timestamp=1573349590929, value
+                    =2019/11/09                                          
+ kss                column=lastlogin:ip, timestamp=1573349455573, value=1
+                    28.220.101.100                                       
+ kss                column=lastlogin:success, timestamp=1573349647124, va
+                    lue=yes                                              
+ kss                column=lastlogin:time, timestamp=1573349628012, value
+                    =08:33:42                                            
+ kss                column=prefs:date_of_birth, timestamp=1573349114795, 
+                    value=1970/06/03                                     
+ kss                column=prefs:security_answer, timestamp=1573349171410
+                    , value=red                                          
+ kss                column=prefs:security_question, timestamp=15733491541
+                    12, value=favorite_color                             
+ kss                column=prefs:status, timestamp=1573349093062, value=m
+                    arried                                               
+ kss1               column=creds:email, timestamp=1573349377078, value=k1
+                    @s.com                                               
+ kss1               column=creds:password, timestamp=1573349391184, value
+                    =mypasswd                                            
+2 row(s) in 0.0570 seconds
+
+hbase(main):023:0> deletall 'User' 'kss1'[41G[40G[39G[38G[37G[36G[35G, 'kss1'[36G[43G
+NoMethodError: undefined method `deletall' for #<Object:0x195580ba>
+
+hbase(main):024:0> deletall 'User', 'kss1'[42G[41G[40G[39G[38G[37G[36G[35G[34G[33G[32G[31G[30G[29G[28G[27G[26G[25Geall 'User', 'kss1'[26G[44G
+0 row(s) in 0.0320 seconds
+
+hbase(main):025:0> scan 'User'
+ROW                 COLUMN+CELL                                          
+ kss                column=creds:email, timestamp=1573349055420, value=k@
+                    s.com                                                
+ kss                column=creds:password, timestamp=1573349068325, value
+                    =mypasswd                                            
+ kss                column=lastlogin:date, timestamp=1573349590929, value
+                    =2019/11/09                                          
+ kss                column=lastlogin:ip, timestamp=1573349455573, value=1
+                    28.220.101.100                                       
+ kss                column=lastlogin:success, timestamp=1573349647124, va
+                    lue=yes                                              
+ kss                column=lastlogin:time, timestamp=1573349628012, value
+                    =08:33:42                                            
+ kss                column=prefs:date_of_birth, timestamp=1573349114795, 
+                    value=1970/06/03                                     
+ kss                column=prefs:security_answer, timestamp=1573349171410
+                    , value=red                                          
+ kss                column=prefs:security_question, timestamp=15733491541
+                    12, value=favorite_color                             
+ kss                column=prefs:status, timestamp=1573349093062, value=m
+                    arried                                               
+1 row(s) in 0.0240 seconds
+
+hbase(main):026:0> exit
+]777;notify;Command completed;hbase shell]0;aagaw29@hdserver:~/hadoop_assignments/HBaseAssignment]7;file://hdserver/home/aagaw29/hadoop_assignments/HBaseAssignment[aagaw29@hdserver HBaseAssignment]$ exit
+exit
+
+Script done on Sat 09 Nov 2019 08:36:42 PM EST
