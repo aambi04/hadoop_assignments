@@ -1,5 +1,5 @@
 # Student Information
-<put your name and email here for identification purposes>
+Ambika Agarwal, aagarw29@jhu.edu
 
 # Programming Assignment 6 - Map Reduce Query
 In this assignment you will be introduced to Avro as a serialization framework. We will continue working with the Enron Data Set from last time.
@@ -118,9 +118,11 @@ Answer the following questions using your query tools.
 
 ### What is the approximate date range of the data?
 <some of these dates are outliers and should be disregarded>
+Looking at the histogram with bin-type equal to year, we see the date range is from 1969-2044!
 
 ### Which month had the most emails sent by enron employees?
 <this will require a select and before the histogram>
+2001-10 had 37107 emails 
 
 ### What is the frequency of enron only emails referencing happy hour?
 <consider both the subject and body>
