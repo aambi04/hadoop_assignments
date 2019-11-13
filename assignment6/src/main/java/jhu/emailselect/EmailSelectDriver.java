@@ -31,7 +31,6 @@ public class EmailSelectDriver extends Configured implements Tool {
         Job job = Job.getInstance(conf, "EmailSelect Processor");
         job.setJarByClass(getClass());
 	String type = conf.get("type");
-	System.out.printf("From pattern %s\n", conf.get("from"));
 		
         String testMode = conf.get("testMode", "none");
         if(testMode.equals("none")) {
