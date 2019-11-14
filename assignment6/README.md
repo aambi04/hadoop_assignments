@@ -122,10 +122,10 @@ Looking at the histogram with bin-type equal to year, we see the date range is f
 
 ### Which month had the most emails sent by enron employees?
 <this will require a select and before the histogram>
-2001-10 had 37107 emails 
+2001-04
 
 ### What is the frequency of enron only emails referencing happy hour?
-<consider both the subject and body>
+
 
 ### Any additional insights you have
 
