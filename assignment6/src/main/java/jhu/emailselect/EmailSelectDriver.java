@@ -2,6 +2,7 @@ package jhu.emailselect;
 
 import jhu.enron.WCReducer;
 import jhu.avro.EmailSimple;
+import org.apache.avro.mapreduce.AvroJob;
 import org.apache.avro.mapreduce.AvroKeyInputFormat;
 import org.apache.avro.mapreduce.AvroKeyOutputFormat;
 import org.apache.hadoop.conf.Configuration;
@@ -38,11 +39,15 @@ public class EmailSelectDriver extends Configured implements Tool {
             System.out.printf("EmailSelect Driver: %s %s\n", inputPath, outputPath);
 
             job.setMapperClass(EmailSelectMapper.class);
-            job.setMapOutputKeyClass(Text.class);
-            job.setMapOutputValueClass(IntWritable.class);
-            job.setReducerClass(WCReducer.class);
-            job.setCombinerClass(WCReducer.class);
-            job.setNumReduceTasks(1);
+            AvroJob.setOutputKeySchema(job, EmailSimple.SCHEMA$);
+            job.setOutputFormatClass(AvroKeyOutputFormat.class);
+	    //job.setMapOutputKeyClass(Text.class);
+            //job.setMapOutputValueClass(IntWritable.class);
+            job.setOutputValueClass(NullWritable.class);
+	    //job.setReducerClass(WCReducer.class);
+            //job.setCombinerClass(WCReducer.class);
+            //job.setNumReduceTasks(1);
+            job.setNumReduceTasks(0);
         }
 
         FileInputFormat.addInputPath(job, new Path(inputPath));

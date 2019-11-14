@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 import jhu.avro.EmailSimple;
 import org.apache.avro.mapred.AvroKey;
 import org.apache.avro.mapred.AvroValue;
+import org.apache.avro.mapred.AvroWrapper;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
@@ -31,7 +32,7 @@ import java.time.LocalDate;
  * Created by wilsopw1 on 2/25/17.
  */
 public class EmailSelectMapper extends Mapper<AvroKey<EmailSimple>, NullWritable,
-        Text, IntWritable> {
+        AvroWrapper<EmailSimple>, NullWritable> {
     Gson gson = new GsonBuilder().create();
     String inputPath = null;
     IntWritable One = new IntWritable(1);
@@ -85,16 +86,22 @@ String formattedDate = dateTime.format(formatter);
 }
 		if (start == null && end != null) {
 			if (date - end_l <= 0) 
-				context.write(new Text (formattedDate), One);
+				//context.write(new Text (formattedDate), One
+				//);
+				context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 
 		} else if (start != null && end == null) {
                         if (start_l - date <= 0)
-                                context.write(new Text (formattedDate), One);
+                                //context.write(new Text (formattedDate), One);
+                                context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 		} else if (start != null && end != null) {
 			if ((date - end_l <=0) && (start_l - date <= 0))
-				context.write(new Text (formattedDate), One);	
+				//context.write(new Text (formattedDate), One);	
+		context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 		}
-		} catch (Exception e) {context.write(new Text(e.toString()), One);}
+		} catch (Exception e) {
+			//context.write(new Text(e.toString()), One);
+		}
 	} else if (type.equals("address")) {
 		String from_pat = "(.*)" + context.getConfiguration().get("from") + "(.*)";
 		String to_pat = "(.*)" + context.getConfiguration().get("to")+ "(.*)";
@@ -129,27 +136,33 @@ String formattedDate = dateTime.format(formatter);
 		if (and != null && and.equals("true")) {
 			if (match_from && match_to_emails.size() > 0 && match_cc_emails.size() > 0){
 		if (match_from)
-                                context.write(new Text(email.getFrom().toString()), One);
+                                //context.write(new Text(email.getFrom().toString()), One);
+                                context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
                         if (match_to_emails.size() > 0){
                                 for (String to_email: match_to_emails)
-                                        context.write(new Text(to_email), One);
+                                        //context.write(new Text(to_email), One);
+context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
                         }
                         if (match_cc_emails.size() > 0) {
                                 for (String cc_email: match_cc_emails)
-                                        context.write(new Text(cc_email), One);
+                                        //context.write(new Text(cc_email), One);
+                                        context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
                         }
 		}
 	
 		} else {
 			if (match_from)
-				context.write(new Text(email.getFrom().toString()), One);
+				//context.write(new Text(email.getFrom().toString()), One);
+			context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 			if (match_to_emails.size() > 0){
 				for (String to_email: match_to_emails)
-					context.write(new Text(to_email), One);
+					//context.write(new Text(to_email), One);
+					context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 			}
 			if (match_cc_emails.size() > 0) {
 				for (String cc_email: match_cc_emails)
-					context.write(new Text(cc_email), One);	
+					//context.write(new Text(cc_email), One);	
+			context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 			}	
 	
 		} 
@@ -157,12 +170,14 @@ String formattedDate = dateTime.format(formatter);
 		String sub_pattern = "(.*)" + context.getConfiguration().get("pattern") + "(.*)";
 		CharSequence subject = email.getSubject();
 		if (subject.toString().matches(sub_pattern)) 
-			context.write(new Text(email.toString()), One);
+			//context.write(new Text(email.toString()), One);
+			context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 	} else if (type.equals("body")) {
 		String bod_pattern = "(.*)" + context.getConfiguration().get("pattern") + "(.*)";
 		CharSequence body = email.getBody();
 		if (body.toString().matches(bod_pattern)) 
-			context.write(new Text(email.toString()), One);
+			//context.write(new Text(email.toString()), One);
+			context.write(new AvroKey<EmailSimple>(email), NullWritable.get());
 	}
     }
 }

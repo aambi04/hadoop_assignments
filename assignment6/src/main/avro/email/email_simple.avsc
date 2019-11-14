@@ -24,5 +24,10 @@
                  { "type": "array",
                    "items":
                    {"name":"email",
-                    "type":"string"}}]} ]
+                    "type":"string"}}]},
+    { "name" : "subject",
+      "type" : ["null", "string"]},
+    { "name" : "body",
+      "type" : ["null", "string"]}
+]
 }

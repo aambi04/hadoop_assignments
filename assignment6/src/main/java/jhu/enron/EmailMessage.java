@@ -50,6 +50,14 @@ public class EmailMessage {
             builder.setBcc(Arrays.<CharSequence>asList(emails));
         } else
             builder.setBcc(null);
+	if (body != "") 
+	    builder.setBody(body.trim().replaceAll("\\s", ""));
+	else 
+	    builder.setBody(null);
+	if (header.containsKey("Subject")) 
+	   builder.setSubject(header.get("Subject"));
+	else 
+	   builder.setSubject(null);
         return builder.build();
     }
 }
