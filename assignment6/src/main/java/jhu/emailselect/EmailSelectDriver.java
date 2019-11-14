@@ -41,12 +41,7 @@ public class EmailSelectDriver extends Configured implements Tool {
             job.setMapperClass(EmailSelectMapper.class);
             AvroJob.setOutputKeySchema(job, EmailSimple.SCHEMA$);
             job.setOutputFormatClass(AvroKeyOutputFormat.class);
-	    //job.setMapOutputKeyClass(Text.class);
-            //job.setMapOutputValueClass(IntWritable.class);
             job.setOutputValueClass(NullWritable.class);
-	    //job.setReducerClass(WCReducer.class);
-            //job.setCombinerClass(WCReducer.class);
-            //job.setNumReduceTasks(1);
             job.setNumReduceTasks(0);
         }
 
